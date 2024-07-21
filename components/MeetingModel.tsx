@@ -1,13 +1,6 @@
 import React, { ReactNode } from "react";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -19,7 +12,9 @@ interface MeetingModalProps {
   className?: string;
   children?: ReactNode;
   handleClick?: () => void;
+  instantMeeting?: boolean;
   buttonText?: string;
+  buttonClassName?: string;
   image: string;
   buttonIcon: string;
 }
@@ -34,6 +29,8 @@ const MeetingModel = ({
   buttonText,
   image,
   buttonIcon,
+  buttonClassName,
+  instantMeeting,
 }: MeetingModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

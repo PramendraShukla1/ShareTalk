@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 "use client";
 import React, { useState } from "react";
 import HomeCard from "./HomeCard";
@@ -102,6 +103,8 @@ const MeetingTypeList = () => {
           onClose={() => setMeetingState(undefined)}
           title="Create Meeting"
           handleClick={createMeeting}
+          image=""
+          buttonIcon=""
         >
           <div className="flex flex-col gap-2.5">
             <label className="text-base text-normal leading-[22px] text-sky-2">
@@ -153,6 +156,8 @@ const MeetingTypeList = () => {
         className="text-center"
         buttonText="Start Meeting"
         handleClick={createMeeting}
+        image=""
+        buttonIcon=""
       />
 
       <MeetingModel
@@ -162,6 +167,8 @@ const MeetingTypeList = () => {
         className="text-center"
         buttonText="Join Meeting"
         handleClick={() => router.push(values.link)}
+        image=""
+        buttonIcon=""
       >
         <Input
           placeholder="Meeting Link"
