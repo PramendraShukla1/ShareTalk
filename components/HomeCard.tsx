@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 interface HomeCardProps {
-  className: String;
-  img: String;
-  title: String;
-  description: String;
+  className: string;
+  img: string;
+  title: string;
+  description: string;
   handleClick: () => void;
 }
 
